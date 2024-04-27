@@ -8,6 +8,7 @@ import subprocess
 import speedtest
 from tqdm import tqdm
 import json
+import sys
 
 
 def is_prime(n):
@@ -40,6 +41,7 @@ class Vps:
     # General info
     provider: str
     location: str
+    tier: str
     usd_per_month: float
     __info_gathered: bool = False
     __fully_benchmarked: bool = False
@@ -65,8 +67,9 @@ class Vps:
     # Network
     inet_benchmark_score: tuple[int, int, float]
 
-    def __init__(self, provider, location, usd_per_month):
+    def __init__(self, provider, tier, location, usd_per_month):
         self.provider = provider
+        self.tier = tier
         self.location = location
         self.usd_per_month = usd_per_month
     
@@ -91,7 +94,10 @@ class Vps:
 
     def get_info(self):
         self.n_cores = multiprocessing.cpu_count()
-        self.clock_speed_mhz = int(psutil.cpu_freq().current)
+        try:
+            self.clock_speed_mhz = int(psutil.cpu_freq().current)
+        except:
+            self.clock_speed_mhz = 3200
         self.cpu_name = platform.processor()
 
         self.memory_mb = psutil.virtual_memory().total // 1024 // 1024
@@ -260,8 +266,21 @@ class Vps:
 
 
 if __name__ == "__main__":
-    vps = Vps("Laptop", "Home", 0)
+    argc = len(sys.argv)
+    # args:
+    # python benchmark_core.py [provider] [tier] [location] [usd_per_month]
+    if argc != 5:
+        print("Usage: python3 benchmark_core.py [provider] [tier] [location] [usd_per_month]")
+        print("Example: python3 benchmark_core.py AWS t2.micro us-east-1 10.0")
+        exit(1)
+    
+    provider = sys.argv[1]
+    tier = sys.argv[2]
+    location = sys.argv[3]
+    usd_per_month = float(sys.argv[4])
+
+    vps = Vps(provider, tier, location, usd_per_month)
     vps.get_info()
     vps.benchmark()
-    print(vps)
-    vps.write_to_json("laptop.json")
+    fp = f"{provider}_{tier}_{location}.json"
+    vps.write_to_json(fp)
