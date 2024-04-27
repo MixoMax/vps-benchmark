@@ -1,0 +1,22 @@
+{
+    "provider": "Laptop",
+    "location": "Home",
+    "usd_per_month": 0,
+    "n_cores": 8,
+    "clock_speed_mhz": 2050,
+    "cpu_name": "x86_64",
+    "cpu_benchmark_score": 410,
+    "memory_mb": 15867,
+    "memory_speed_mhz": 3200,
+    "memory_benchmark_score": 7237,
+    "disk_size_gb": 467,
+    "disk_benchmark_score": [
+        1736,
+        1231
+    ],
+    "inet_benchmark_score": [
+        88,
+        33,
+        9.225
+    ]
+}
