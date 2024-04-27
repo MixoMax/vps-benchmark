@@ -1,0 +1,22 @@
+{
+    "provider": "hetzner",
+    "location": "Helsinki",
+    "usd_per_month": 4.82,
+    "n_cores": 2,
+    "clock_speed_mhz": 3200,
+    "cpu_name": "aarch64",
+    "cpu_benchmark_score": 150,
+    "memory_mb": 3813,
+    "memory_speed_mhz": 3200,
+    "memory_benchmark_score": 7927,
+    "disk_size_gb": 37,
+    "disk_benchmark_score": [
+        2147,
+        1271
+    ],
+    "inet_benchmark_score": [
+        2875,
+        1313,
+        5.896
+    ]
+}
