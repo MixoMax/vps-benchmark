@@ -1,0 +1,22 @@
+{
+    "provider": "Hostbrrr",
+    "location": "?",
+    "usd_per_month": 4.5,
+    "n_cores": 2,
+    "clock_speed_mhz": 2446,
+    "cpu_name": "x86_64",
+    "cpu_benchmark_score": 248,
+    "memory_mb": 9905,
+    "memory_speed_mhz": 3200,
+    "memory_benchmark_score": 2504,
+    "disk_size_gb": 77,
+    "disk_benchmark_score": [
+        2574,
+        1888
+    ],
+    "inet_benchmark_score": [
+        104,
+        691,
+        2.072
+    ]
+}

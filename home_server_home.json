@@ -1,0 +1,22 @@
+{
+    "provider": "home",
+    "location": "Hamburg",
+    "usd_per_month": 0.0,
+    "n_cores": 24,
+    "clock_speed_mhz": 2067,
+    "cpu_name": "x86_64",
+    "cpu_benchmark_score": 935,
+    "memory_mb": 145018,
+    "memory_speed_mhz": 3200,
+    "memory_benchmark_score": 5175,
+    "disk_size_gb": 218,
+    "disk_benchmark_score": [
+        1508,
+        825
+    ],
+    "inet_benchmark_score": [
+        84,
+        37,
+        13.835
+    ]
+}

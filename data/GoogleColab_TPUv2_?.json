@@ -1,0 +1,22 @@
+{
+    "provider": "Google_Colab",
+    "location": "?",
+    "usd_per_month": 0.0,
+    "n_cores": 96,
+    "clock_speed_mhz": 2000,
+    "cpu_name": "x86_64",
+    "cpu_benchmark_score": 2718,
+    "memory_mb": 342591,
+    "memory_speed_mhz": 3200,
+    "memory_benchmark_score": 63798,
+    "disk_size_gb": 225,
+    "disk_benchmark_score": [
+        1495,
+        1257
+    ],
+    "inet_benchmark_score": [
+        1839,
+        747,
+        31.969
+    ]
+}

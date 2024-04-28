@@ -8,6 +8,8 @@ ext_packages = [
     "tqdm"
 ]
 
+os.system("apt-get install python3-pip")
+
 for package in ext_packages:
     os.system(f"pip install {package}")
 
